@@ -1,0 +1,73 @@
+{
+    "welcome": "مرحبًا بكم في DevSpark",
+    "language_selector": "اللغة",
+    "header": {
+        "home": "الرئيسية",
+        "about": "من نحن",
+        "services": "خدماتنا",
+        "work": "اعمالنا",
+        "contact": "تواصل معنا"
+    },
+    "landing": {
+        "hero_text": "نحو برمجيات أسرع ... أذكى ...  وأكثر ابتكارًا",
+        "contact_us": "تواصل معنا"
+    },
+    "values": {
+        "title": "قيمنا",
+        "description": "نحن نؤمن بـ...",
+        "innovation": {
+            "title": "ابتكار مستمر",
+            "description": "نبحث دائمًا عن أحدث الحلول"
+        },
+        "quality": {
+            "title": "جودة مضمونة",
+            "description": "تنفيذ احترافي لكل مشروع"
+        },
+        "partnership": {
+            "title": "شراكة طويلة الأمد",
+            "description": "نجاحك هو نجاحنا"
+        }
+    },
+    "about_section": {
+        "title": "من نحن",
+        "description": "في DevSpark، نمزج بين الإبداع والخبرة التقنية لنحوّل أفكارك إلى منتجات رقمية مبهرة. نعمل بشغف على تصميم وتطوير حلول برمجية متكاملة، تجعل حضورك الرقمي أكثر تأثيرًا ونجاحًا."
+    },
+    "services_section": {
+        "title": "خدماتنا",
+        "web_dev": {
+            "title": "تطوير الويب",
+            "description": "نقدم حلولاً متكاملة لتطوير المواقع"
+        },
+        "app_dev": {
+            "title": "تطوير التطبيقات",
+            "description": "نساعدك في بناء تطبيقات مخصصة"
+        },
+        "digital_marketing": {
+            "title": "التسويق الرقمي",
+            "description": "استراتيجيات فعالة لزيادة الوعي بعلامتك التجارية"
+        },
+        "support": {
+            "title": "الدعم الفني",
+            "description": "دعم فني متواصل لضمان استقرار أعمالك"
+        }
+    },
+    "contact_section": {
+        "title": "تواصل معنا",
+        "form": {
+            "name": "الاسم",
+            "name_placeholder": "أدخل اسمك",
+            "number": "الرقم",
+            "number_placeholder": "أدخل رقمك",
+            "email": "البريد الإلكتروني",
+            "email_placeholder": "أدخل بريدك الإلكتروني",
+            "message": "الرسالة",
+            "message_placeholder": "أدخل رسالتك",
+            "submit": "إرسـال",
+            "success_message": "تم إرسال الرسالة بنجاح!",
+            "error_message": "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى."
+        }
+    },
+    "footer": {
+        "address": "الــيــمــن - حـضـرمـوت - الـمـكـلا - أبـراج بـن مـحـفـوظ"
+    }
+}

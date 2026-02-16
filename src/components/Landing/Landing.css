@@ -1,0 +1,119 @@
+.landing {
+    background: url('../../assets/images/background hero.jpg');
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.landing .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .landing {
+        background-size: 100% 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing {
+        background-size: 100% 100%;
+    }
+}
+
+.landing .hero .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.landing .hero .content img {
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .landing .hero .content img {
+        max-width: 100%;
+    }
+}
+
+.landing .hero .content p {
+    color: var(--third-color);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .landing .hero .content p {
+        max-width: 100%;
+        padding: 20px;
+        font-size: 24px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 576px) {
+    .landing .hero .content p {
+        font-size: 20px;
+        padding: 15px;
+        line-height: 1.5;
+    }
+}
+
+.landing button a {
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    background-color: var(--third-color);
+    color: var(--main-color);
+    transform: translateX(-50%);
+    padding: 20px 80px;
+    border-radius: 8px;
+    font-size: 25px;
+    border-style: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+@media (max-width: 767px) {
+    .landing button a {
+        padding: 20px 60px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .landing button a {
+        padding: 15px 40px;
+        font-size: 18px;
+        bottom: 50px;
+    }
+}
+
+.landing button a:hover {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+}

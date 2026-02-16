@@ -1,0 +1,182 @@
+.services {
+    padding-top: var(--main-padding);
+}
+
+.services .main-heading .address img {
+    width: 150px;
+    height: auto;
+}
+
+.services .container-service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 64px;
+}
+
+.services .container-service .card {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    max-width: 400px;
+    min-width: 250px;
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    padding-bottom: 120px;
+    background-color: var(--third-color);
+    box-shadow: 0 2px 15px rgb(0 0 0 /10%);
+    transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+@media (max-width: 576px) {
+    .services .container-service .card {
+        min-width: 100%;
+        min-height: 280px;
+        height: auto;
+    }
+}
+
+.services .container-service .card:hover {
+    box-shadow: 0 4px 30px rgb(0 0 0 /20%);
+    transform: translateY(-10px);
+}
+
+.services .container-service .card:nth-child(1)::before,
+.services .container-service .card:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 80%;
+    height: 50px;
+    background-color: var(--secondary-color);
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+}
+
+@media (max-width: 767px) {
+
+    .services .container-service .card:nth-child(1)::before,
+    .services .container-service .card:nth-child(3)::before {
+        right: 20px;
+        width: 60%;
+    }
+}
+
+.services .container-service .card:nth-child(2)::before,
+.services .container-service .card:nth-child(4)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 80%;
+    height: 50px;
+    background-color: var(--main-color);
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+}
+
+.services .container-service .card:nth-child(1):after,
+.services .container-service .card:nth-child(3):after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 70px;
+    width: 80%;
+    height: 50px;
+    background-color: var(--main-color);
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+}
+
+.services .container-service .card:nth-child(2):after,
+.services .container-service .card:nth-child(4):after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 70px;
+    width: 80%;
+    height: 50px;
+    background-color: var(--secondary-color);
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+}
+
+@media (max-width: 767px) {
+
+    .services .container-service .card:nth-child(2):after,
+    .services .container-service .card:nth-child(4):after {
+        right: 35px;
+        width: 60%;
+    }
+}
+
+.services .container-service .card img {
+    padding: 20px;
+    width: 120px;
+    height: 120px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.services .container-service .card:hover img {
+    transform: rotate(360deg);
+}
+
+.services .container-service .card:nth-child(1) img,
+.services .container-service .card:nth-child(3) img {
+    display: block;
+    margin-left: auto;
+}
+
+.services .container-service .card:nth-child(2) img,
+.services .container-service .card:nth-child(4) img {
+    display: block;
+    margin-right: auto;
+}
+
+.services .container-service .card h3 {
+    text-align: center;
+    width: 100%;
+}
+
+.services .container-service .card p {
+    text-align: center;
+    padding: 20px;
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 767px) {
+    .services .main-heading .address {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

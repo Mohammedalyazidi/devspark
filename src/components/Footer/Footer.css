@@ -1,0 +1,202 @@
+.footer {
+    position: relative;
+    background-image: url('../../assets/images/backrground footer (1).png');
+    height: 350px;
+    max-height: 100%;
+}
+
+.footer .cont-footer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .footer .cont-footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width : 767px) {
+    .footer .cont-footer {
+        gap: 0;
+    }
+}
+
+.footer .logo {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.footer .logo img {
+    width: 140px;
+}
+
+.footer .logo .sm-links {
+    cursor: pointer;
+    gap: 4px;
+}
+
+.footer .logo .sm-links i {
+    font-size: 12px;
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    border-radius: 50px;
+    padding: 6px 7px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.footer .logo .sm-links i:hover {
+    color: var(--main-color);
+    background-color: var(--third-color);
+}
+
+.footer .cont-footer .lo {
+    display: flex;
+    gap: 50px;
+}
+
+@media (max-width : 767px) {
+    .footer .cont-footer .lo {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.footer .cont-footer .add {
+    display: block;
+    border-left: 1px solid var(--secondary-color);
+    border-right: 1px solid var(--secondary-color);
+    padding: 20px;
+    min-width: 400px;
+}
+
+@media (max-width: 992px) {
+    .footer .cont-footer .add {
+        border-right: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer .cont-footer .add {
+        border-right: none;
+        border-left: none;
+    }
+}
+
+.footer .cont-footer .add i {
+    font-size: 10px;
+    padding: 7px 8px;
+}
+
+.footer .cont-footer .add .location {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer .cont-footer .add .location i {
+    background-color: var(--third-color);
+    color: var(--main-color);
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.footer .cont-footer .add .location h4 {
+    color: var(--third-color);
+    margin-right: 5px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.footer .cont-footer .add .conta {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.footer .cont-footer .add .conta .mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .cont-footer .add .conta .mail i {
+    background-color: var(--third-color);
+    color: var(--main-color);
+    border-radius: 100%;
+}
+
+.footer .cont-footer .add .conta .mail a {
+    margin: 0 8px;
+    font-size: 16px;
+    color: var(--third-color);
+    letter-spacing: 2px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.footer .cont-footer .add .conta .mail a:hover {
+    color: var(--secondary-color);
+}
+
+.footer .cont-footer .add .conta .phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .cont-footer .add .conta .phone i {
+    background-color: var(--third-color);
+    color: var(--main-color);
+    border-radius: 100%;
+}
+
+.footer .cont-footer .add .conta .phone p {
+    margin-right: 5px;
+    color: var(--third-color);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.footer .cont-footer .main-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.footer .cont-footer .main-links a {
+    color: var(--third-color);
+    width: 100%;
+    min-width: 60px;
+}
+
+.footer .cont-footer .main-links a:hover {
+    color: var(--secondary-color);
+}

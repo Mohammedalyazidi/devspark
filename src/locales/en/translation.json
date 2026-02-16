@@ -1,0 +1,73 @@
+{
+    "welcome": "Welcome to DevSpark",
+    "language_selector": "Language",
+    "header": {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Services",
+        "work": "Our Work",
+        "contact": "Contact Us"
+    },
+    "landing": {
+        "hero_text": "Towards faster... smarter... and more innovative software",
+        "contact_us": "Contact Us"
+    },
+    "values": {
+        "title": "Our Values",
+        "description": "We believe in...",
+        "innovation": {
+            "title": "Continuous Innovation",
+            "description": "We always seek the latest solutions"
+        },
+        "quality": {
+            "title": "Guaranteed Quality",
+            "description": "Professional execution for every project"
+        },
+        "partnership": {
+            "title": "Long-term Partnership",
+            "description": "Your success is our success"
+        }
+    },
+    "about_section": {
+        "title": "About Us",
+        "description": "At DevSpark, we blend creativity and technical expertise to transform your ideas into dazzling digital products. We work passionately to design and develop integrated software solutions that make your digital presence more impactful and successful."
+    },
+    "services_section": {
+        "title": "Our Services",
+        "web_dev": {
+            "title": "Web Development",
+            "description": "We offer integrated solutions for website development"
+        },
+        "app_dev": {
+            "title": "App Development",
+            "description": "We help you build custom applications"
+        },
+        "digital_marketing": {
+            "title": "Digital Marketing",
+            "description": "Effective strategies to increase your brand awareness"
+        },
+        "support": {
+            "title": "Technical Support",
+            "description": "Continuous technical support to ensure your business stability"
+        }
+    },
+    "contact_section": {
+        "title": "Contact Us",
+        "form": {
+            "name": "Name",
+            "name_placeholder": "Enter your name",
+            "number": "Number",
+            "number_placeholder": "Enter your number",
+            "email": "Email",
+            "email_placeholder": "Enter your email",
+            "message": "Message",
+            "message_placeholder": "Enter your message",
+            "submit": "Send",
+            "success_message": "Message sent successfully!",
+            "error_message": "Failed to send message. Please try again."
+        }
+    },
+    "footer": {
+        "address": "Yemen - Hadhramaut - Mukalla - Bin Mahfouz Towers"
+    }
+}
