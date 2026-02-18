@@ -31,35 +31,44 @@ const Contact = () => {
         setStatus({ type: null, message: '' });
 
         try {
-            const apiUrl = import.meta.env.VITE_API_URL || '/send_mail.php';
-            console.log('Sending request to:', apiUrl);
+            const googleAppsScriptUrl = import.meta.env.VITE_GOOGLE_APPS_SCRIPT_URL;
+            
+            if (!googleAppsScriptUrl) {
+                throw new Error('Google Apps Script URL is not configured. Please set VITE_GOOGLE_APPS_SCRIPT_URL in your environment variables.');
+            }
 
-            const response = await fetch(apiUrl, {
+            console.log('Sending request to Google Apps Script:', googleAppsScriptUrl);
+
+            // Prepare data for Google Apps Script
+            const formDataToSend = new FormData();
+            formDataToSend.append('name', formData.name);
+            formDataToSend.append('email', formData.email);
+            formDataToSend.append('phone', formData.number);
+            formDataToSend.append('message', formData.message);
+
+            const response = await fetch(googleAppsScriptUrl, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
+                mode: 'cors',
+                body: formDataToSend,
             });
 
             console.log('Response status:', response.status);
+            console.log('Response headers:', response.headers);
 
-            const contentType = response.headers.get("content-type");
-            if (contentType && contentType.indexOf("application/json") !== -1) {
-                const result = await response.json();
-                console.log('Response data:', result);
+            if (!response.ok) {
+                const errorText = await response.text();
+                console.error('Error response:', errorText);
+                throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
+            }
 
-                if (result.success) {
-                    setStatus({ type: 'success', message: t('contact_section.form.success_message') });
-                    setFormData({ name: '', number: '', email: '', message: '', _gotcha: '' });
-                } else {
-                    setStatus({ type: 'error', message: result.message || t('contact_section.form.error_message') });
-                }
+            const result = await response.json();
+            console.log('Response data:', result);
+
+            if (result.status === 'success') {
+                setStatus({ type: 'success', message: t('contact_section.form.success_message') });
+                setFormData({ name: '', number: '', email: '', message: '', _gotcha: '' });
             } else {
-                // Handle non-JSON response (e.g., PHP error or 404 HTML page)
-                const text = await response.text();
-                console.error('Non-JSON response:', text);
-                throw new Error('Received non-JSON response from server.');
+                setStatus({ type: 'error', message: result.message || t('contact_section.form.error_message') });
             }
 
         } catch (error) {

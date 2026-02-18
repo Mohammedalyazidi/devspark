@@ -26,7 +26,7 @@ const Footer = () => {
                         <div className="conta">
                             <div className="mail">
                                 <i className="fas fa-envelope"></i>
-                                <a href="mailto:info@devspark.com">info@devspark.com</a>
+                                <a href="mailto:support@devspark.info">support@devspark.info</a>
                             </div>
                             <div className="phone">
                                 <i className="fas fa-phone-alt"></i>

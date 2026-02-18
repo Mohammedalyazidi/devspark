@@ -13,7 +13,7 @@ const Landing = () => {
                 </div>
             </div>
             <button>
-                <a href="#contact">
+                <a href="mailto:support@devspark.info">
                     {t('landing.contact_us')}
                 </a>
             </button>
