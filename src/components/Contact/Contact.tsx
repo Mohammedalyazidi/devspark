@@ -20,7 +20,6 @@ const Contact = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Spam check: if honeypot is filled, silently fail or return success to fool bots
         if (formData._gotcha) {
             setStatus({ type: 'success', message: t('contact_section.form.success_message') || 'Message sent successfully!' });
             setFormData({ name: '', number: '', email: '', message: '', _gotcha: '' });
@@ -39,37 +38,26 @@ const Contact = () => {
 
             console.log('Sending request to Google Apps Script:', googleAppsScriptUrl);
 
-            // Prepare data for Google Apps Script
-            const formDataToSend = new FormData();
-            formDataToSend.append('name', formData.name);
-            formDataToSend.append('email', formData.email);
-            formDataToSend.append('phone', formData.number);
-            formDataToSend.append('message', formData.message);
-
-            const response = await fetch(googleAppsScriptUrl, {
-                method: 'POST',
-                mode: 'cors',
-                body: formDataToSend,
+           
+            const payload = JSON.stringify({
+                name: formData.name,
+                email: formData.email,
+                phone: formData.number,
+                message: formData.message,
             });
 
-            console.log('Response status:', response.status);
-            console.log('Response headers:', response.headers);
+            await fetch(googleAppsScriptUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'text/plain',
+                },
+                body: payload,
+            });
 
-            if (!response.ok) {
-                const errorText = await response.text();
-                console.error('Error response:', errorText);
-                throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
-            }
-
-            const result = await response.json();
-            console.log('Response data:', result);
-
-            if (result.status === 'success') {
-                setStatus({ type: 'success', message: t('contact_section.form.success_message') });
-                setFormData({ name: '', number: '', email: '', message: '', _gotcha: '' });
-            } else {
-                setStatus({ type: 'error', message: result.message || t('contact_section.form.error_message') });
-            }
+           
+            setStatus({ type: 'success', message: t('contact_section.form.success_message') });
+            setFormData({ name: '', number: '', email: '', message: '', _gotcha: '' });
 
         } catch (error) {
             console.error('Error sending message:', error);
