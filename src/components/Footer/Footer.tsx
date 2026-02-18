@@ -38,7 +38,6 @@ const Footer = () => {
                         <a href="#hero">{t('header.home')}</a>
                         <a href="#about">{t('header.about')}</a>
                         <a href="#services">{t('header.services')}</a>
-                        <a href="#">{t('header.work')}</a>
                     </div>
                 </div>
             </div>
